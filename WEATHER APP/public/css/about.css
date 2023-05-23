@@ -1,0 +1,13 @@
+body{
+   background-color: aquamarine;
+   font-family: 'Quicksand', sans-serif;
+}
+h4::first-letter{
+    font-size: larger;
+    color: red;
+    /* font-family: 'Quicksand', sans-serif; */
+
+}
+a:hover{
+    color: violet;
+}

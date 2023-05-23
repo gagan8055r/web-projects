@@ -1,0 +1,43 @@
+
+h2{
+    color: #FFB200;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    position: relative;
+    top: 290px;
+    left: 4px;
+    font-family: 'Quicksand', sans-serif;
+    /* border: 2px solid black; */
+    /* height: 500px; */
+    /* width: 500px; */
+  
+}
+body{
+    background-color:black;
+}
+
+.erro{
+    color: red;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    position: relative;
+    top: 400px;
+    left: 650px;
+    font-family: 'Quicksand', sans-serif;
+    background-color: rgb(149, 83, 210);
+    box-shadow: 0px 1px 6px 3px #FFB200 ;
+        /* 0px 1px 6px 3px #ffb200 */
+        border-radius: 10px;
+        /* height: 30px; */
+   
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    /* transform: scale(1.5); */
+color: deeppink;
+
+}

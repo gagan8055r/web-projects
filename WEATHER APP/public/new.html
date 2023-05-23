@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best jokes</title>
+</head>
+<style>
+    body{
+        background-color: aquamarine;
+        /* display: flex; */
+        
+    }
+    .container{
+        border: 2px solid red;
+        background-color: azure;
+       /* display: inline; */
+       /* display: inline; */
+       display: flex;
+       width: 1260px;
+      
+       justify-content: center;
+       position: relative;
+       align-items: center;
+       top: 187px;
+       left: 50px;
+       font-family: 'Fuzzy Bubbles', cursive;
+       /* border: 200px solid red; */
+       /* box-shadow: 2px 4px 3px blueviolet ; */
+       /* justify-items: center; */
+       
+    }
+    h3{
+        position: relative;
+        left: 117px;
+    }
+    .joke{
+        position: relative;
+        top: 50px;
+        /* display: inline; */
+        right: 150px;
+    }
+    .jokebtn{
+        border-radius: 12px;
+        background-color: deeppink;
+        cursor: pointer;
+        position: relative;
+        top: 100px;
+        right: 288px;
+    }
+    
+
+    /* body{
+        background-color: aquamarine;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     }
+     #parent{
+        background-color: bisque;
+        width: 420px;
+        height: 300px;
+        border: 2px solid red;
+    position: relative;
+    top: 135px;
+     }
+     #child{
+        background-color: fuchsia;
+        width: 128px;
+        height: 120px;
+        border: 2px solid blueviolet;
+    position: relative;
+    top: 100px;
+    left: 140px;
+     } */
+    /* button{
+        background-color: red;
+        cursor: pointer;
+    } */
+    
+</style>
+<body>
+    <div class="container">
+        <h3> 🤣 Best jokes to make your day 😍</h3>
+
+        <p id="joke" class="joke">Awesome jokes are loading</p>
+        <button id="jokebtn" class="jokebtn">Next joke</button>
+
+
+    </div>
+    <!-- <div class="container">
+        <div id="parent">
+            <div id="child"></div>
+        </div>
+    </div> -->
+    <!-- <div class="container">
+    <h1>this is event object</h1>
+ 
+
+    <span>please enter the keywords below</span>
+    <form action="">
+        <input type="text" onkeypress="keypress()" onkeydown="keydown()" onkeyup="keyup()">
+        <p id="keys"></p>
+    </form>
+</div> -->
+    <!-- <div class="container"> -->
+        <!-- <p id="mp" onmousedown="mousedown()" onmouseup="mouseup()">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, possimus! Ratione suscipit dolor consectetur provident optio aut, asperiores laboriosam aliquid?</p> */ -->
+        <!-- <div class="firstchild">
+            this is first one
+        </div>
+        <div class="secondchild">
+            this is second one
+        </div>
+        <div class="thirdchild">
+            this is third one
+        </div>
+    </div> -->
+    <!-- <button id="firstway">event listener</button> -->
+    <script> 
+    const joke=document.getElementById('joke')
+    const jokebtn=document.getElementById('jokebtn')
+    const generatejokes= async()=>{
+        try{
+    const setHeader={
+       headers:{
+           Accept:'application/json'
+       }
+    }
+const res =await
+ fetch('https://icanhazdadjoke.com',setHeader)
+const data= await res.json();
+joke.innerHTML= data.joke;
+        }
+        catch(err){
+            console.log(`the error is ${err}`);
+
+        }
+    }
+// .then((res)=>res.json())
+// .then((data)=>joke.innerHTML=data.joke)
+// .catch(()=>console.log('error has occured'))
+
+// }
+    jokebtn.addEventListener('click',generatejokes)
+    generatejokes()
+
+
+
+
+
+
+
+
+
+
+
+    // const parentname=document.getElementById('parent')
+    // const childname=document.getElementById('child')
+
+    // const parentcall=()=>{
+    //     alert('this is parent call')
+    //     event.stopPropagation()
+    // }
+    // const childcall=()=>{
+    //     alert('this is child call')
+    // }
+    // always default bubble propagation only works so default is false , but when chase propagation only true should be present in third arguement of add addEventListener
+    // parentname.addEventListener('click',parentcall,true)
+    // childname.addEventListener('click',childcall,true)
+    // const keypress=()=>{
+    //     document.getElementById('keys').innerHTML=` you pressed  ${event.key} and code is   ${event.code}`
+    // }
+    // const keydown=()=>{
+    //     document.getElementById('keys').innerHTML=` you pressed  ${event.key} and code is   ${event.code}`
+    // }
+    // const keyup=()=>{
+    //     document.getElementById('keys').innerHTML=` you pressed  ${event.key} and code is   ${event.code}`
+    // }
+    // function mouseup() {
+    //     document.getElementById('mp').style.color='red'
+        
+    // }
+    // function mousedown() {
+    //     document.getElementById('mp').style.color='orange'
+        
+    // }
+        // const firstway=document.getElementById('firstway')
+        // const checkevent=()=>{
+        //     alert('this is new event')
+        //     console.log(event);
+        //     console.log(event.target);
+        //     console.log(event.type);
+        // }
+        // firstway.addEventListener('click',checkevent)
+//         const container=document.querySelector('#container')
+// const request=new XMLHttpRequest()
+// request.open('GET','https://google.com')
+// request.send()
+// // to get response
+// request.addEventListener('load',function(){
+//    console.log( this.responseText);
+// })
+// var animals={
+//     name:'tiger',
+//     class:'canabiles'
+// }
+// var jassu=JSON.stringify(animals)
+// console.log(JSON.parse(jassu));
+
+
+    </script>
+</body>
+</html>

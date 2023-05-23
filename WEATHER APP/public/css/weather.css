@@ -1,0 +1,29 @@
+body{
+    background-color: aquamarine;
+    font-family: 'Quicksand', sans-serif;
+}
+/* .container{
+} */
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+input{
+    font-family: 'Quicksand', sans-serif;
+    width: 530px;
+    height: 35px;
+    border: 2px solid deepskyblue;
+    border-radius: 18px;
+}
+.search{
+    background-color: red;
+    position: relative;
+    /* top: 100px; */
+    right: 70px;
+}
+#id{
+    background-color: red;
+    
+}
